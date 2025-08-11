@@ -593,4 +593,41 @@ h1, h2, h3, .hero-text,
   h1, h2, h3, .projects-title, .skills-title, .experience-title, #contact h2 {
     font-size: calc(1.2rem + 1vw);
   }
+  
+img {
+  max-width: 100% ;
+  height: auto ;
+  display: block ;
+  object-fit: contain; 
 }
+
+}
+@media (max-width: 600px) {
+  #contact .contact-links {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center horizontally */
+    gap: 20px;              /* space between images */
+  }
+
+  #contact .contact-links img {
+    width: 150px;   /* keep size or adjust as needed */
+    height: 150px;
+    margin: 0;      /* remove extra margin */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .social-links {
+    justify-content: center; 
+    gap: 15px;               
+    margin-top: 20px;        
+  }
+
+  .social-links a img {
+    width: 45px;            
+    height: 45px;
+  }
+}
+
