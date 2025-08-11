@@ -5,50 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="Style.css" />
-  <style>
-   
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background-color: #111;
-        top: 65px; 
-        right: 30px;
-        width: 180px;
-        border-radius: 8px;
-        padding: 10px 0;
-        box-shadow: 0 0 10px rgba(255,0,0,0.6);
-        z-index: 1100;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-      }
-
-      .nav-links li a img {
-        height: 30px; 
-      }
-
-      .hamburger {
-        display: block;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .hamburger {
-        display: none;
-      }
-    }
-  </style>
 </head>
 <body style="background-color: black;">
 
@@ -64,6 +20,8 @@
         <li><a href="#projects"><img src="images/cibip.png" alt="Projects" /></a></li>
         <li><a href="#skills"><img src="images/cibis.png" alt="Skills" /></a></li>
         <li><a href="#experience"><img src="images/cibie.png" alt="experience" /></a></li>
+        
+
         <li><a href="#contact"><img src="images/cibic.png" alt="Contact" /></a></li>
       </ul>
       <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
@@ -109,190 +67,175 @@
 
   <section id="about">
     <div class="about-container">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I’m <strong>Cibi Arulnath</strong>, a <strong>Full Stack Developer</strong> and <strong>Computer Vision Engineer</strong> passionate about building innovative solutions.</p>
-        <p>I specialize in <strong>Java, React.js, Spring Boot, MySQL, and OpenCV</strong>, creating projects from gesture-controlled games to AI-powered emotion detection.</p>
-        <p>My experience spans <strong>web development, machine learning, deep learning</strong>.</p>
-        <p>I’ve built solutions for <strong>object detection, hand sign recognition, and e-commerce platforms</strong>.</p>
-        <p>I enjoy crafting sleek front-ends and optimizing back-end performance.</p>
-        <p>My AI work includes training custom models for <strong>real-world applications</strong>.</p>
-        <p>I thrive on learning, problem-solving, and making tech more accessible.</p>
-        <p>Innovation and impact drive everything I create.</p>
-        <p>And I Love To play Videogames </p>
-      </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+           <p>I’m <strong>Cibi Arulnath</strong>, a <strong>Full Stack Developer</strong> and <strong>Computer Vision Engineer</strong> passionate about building innovative solutions.</p>
+      <p>I specialize in <strong>Java, React.js, Spring Boot, MySQL, and OpenCV</strong>, creating projects from gesture-controlled games to AI-powered emotion detection.</p>
+      <p>My experience spans <strong>web development, machine learning, deep learning</strong>.</p>
+      <p>I’ve built solutions for <strong>object detection, hand sign recognition, and e-commerce platforms</strong>.</p>
+      <p>I enjoy crafting sleek front-ends and optimizing back-end performance.</p>
+      <p>My AI work includes training custom models for <strong>real-world applications</strong>.</p>
+      <p>I thrive on learning, problem-solving, and making tech more accessible.</p>
+      <p>Innovation and impact drive everything I create.</p>
+      <p>And I Love To play Videogames </p>
+        </div>
+        
     </div>
-  </section>
+</section>
+<section id="projects">
+  <h2 class="projects-title">My Projects</h2>
 
 
-  <section id="projects">
-    <h2 class="projects-title">My Projects</h2>
+  <div class="project-tabs">
+    <button class="tab-btn active" onclick="showProjects('opencv', event)">OpenCV</button>
+    <button class="tab-btn" onclick="showProjects('web', event)">Web Projects</button>
+  </div>
 
-   
-    <div class="project-tabs">
-      <button class="tab-btn active" onclick="showProjects('opencv', event)">OpenCV</button>
-      <button class="tab-btn" onclick="showProjects('web', event)">Web Projects</button>
-    </div>
 
-    
-    <div id="opencv" class="project-content">
-      <div class="project-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Finger Detection</div>
-        <div class="back">
-          <p>Detects number of fingers using OpenCV.</p>
-          <a href="https://github.com/cibizoro/cibi-open-cv-finger-detection" target="_blank">View Project</a>
-        </div>
-      </div>
-
-      <div class="project-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Object Detection</div>
-        <div class="back">
-          <p>YOLO-powered real-time object detection.</p>
-          <a href="https://github.com/cibizoro/OpenCV-ObjectDetection" target="_blank">View Project</a>
-        </div>
-      </div>
-
-      <div class="project-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Emotion Detection</div>
-        <div class="back">
-          <p>Classifies emotions from facial expressions.</p>
-          <a href="https://github.com/cibizoro/emotion-detection" target="_blank">View Project</a>
-        </div>
+  <div id="opencv" class="project-content">
+    <div class="project-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Finger Detection</div>
+      <div class="back">
+        <p>Detects number of fingers using OpenCV.</p>
+        <a href="https://github.com/cibizoro/cibi-open-cv-finger-detection" target="_blank">View Project</a>
       </div>
     </div>
 
-
-    <div id="web" class="project-content hidden">
-      <div class="project-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Forever</div>
-        <div class="back">
-          <p>Full-stack e-commerce store.</p>
-          <a href="https://cibiforever.netlify.app/" target="_blank">View Project</a>
-        </div>
-      </div>
-
-      <div class="project-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Tomato</div>
-        <div class="back">
-          <p>React.js food ordering app.</p>
-          <a href="https://cibitomato.netlify.app/" target="_blank">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="skills">
-    <h2 class="skills-title">Skills</h2>
-
-    <div class="skills-tabs">
-      <button class="tab-btn-skill active" onclick="showSkills('cv', event)">Computer Vision & AI</button>
-      <button class="tab-btn-skill" onclick="showSkills('webdev', event)">Web Development</button>
-    </div>
-
-   
-    <div id="cv" class="skills-content">
-      <div class="skill-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Languages</div>
-        <div class="back">
-          <p>Python, Java</p>
-        </div>
-      </div>
-
-      <div class="skill-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Frameworks & Libraries</div>
-        <div class="back">
-          <p>OpenCV, TensorFlow, ONNX Runtime</p>
-        </div>
-      </div>
-
-      <div class="skill-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Tools</div>
-        <div class="back">
-          <p>ONNX Converter, TensorFlow Model Maker, VS Code, Roboflow</p>
-        </div>
+    <div class="project-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Object Detection</div>
+      <div class="back">
+        <p>YOLO-powered real-time object detection.</p>
+        <a href="https://github.com/cibizoro/OpenCV-ObjectDetection" target="_blank">View Project</a>
       </div>
     </div>
 
-   
-    <div id="webdev" class="skills-content hidden">
-      <div class="skill-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Languages</div>
-        <div class="back">
-          <p>HTML, CSS, JavaScript, SQL</p>
-        </div>
-      </div>
-
-      <div class="skill-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Frameworks & Libraries</div>
-        <div class="back">
-          <p>ReactJS, NodeJS, TailwindCSS</p>
-        </div>
-      </div>
-
-      <div class="skill-card" onclick="this.classList.toggle('flipped')">
-        <div class="front">Databases & Tools</div>
-        <div class="back">
-          <p>MongoDB, GitHub, Netlify, VS Code</p>
-        </div>
+    <div class="project-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Emotion Detection</div>
+      <div class="back">
+        <p>Classifies emotions from facial expressions.</p>
+        <a href="https://github.com/cibizoro/emotion-detection" target="_blank">View Project</a>
       </div>
     </div>
-  </section>
+  </div>
 
 
-  <section id="experience" class="section">
+  <div id="web" class="project-content hidden">
+    <div class="project-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Forever</div>
+      <div class="back">
+        <p>Full-stack e-commerce store.</p>
+        <a href="https://cibiforever.netlify.app/" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Tomato</div>
+      <div class="back">
+        <p>React.js food ordering app.</p>
+        <a href="https://cibitomato.netlify.app/" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="skills-title">Skills</h2>
+
+
+  <div class="skills-tabs">
+    <button class="tab-btn-skill active" onclick="showSkills('cv', event)">Computer Vision & AI</button>
+    <button class="tab-btn-skill" onclick="showSkills('webdev', event)">Web Development</button>
+  </div>
+
+
+  <div id="cv" class="skills-content">
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Languages</div>
+      <div class="back">
+        <p>Python, Java</p>
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Frameworks & Libraries</div>
+      <div class="back">
+        <p>OpenCV, TensorFlow, ONNX Runtime</p>
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Tools</div>
+      <div class="back">
+        <p>ONNX Converter, TensorFlow Model Maker, VS Code, Roboflow</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="webdev" class="skills-content hidden">
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Languages</div>
+      <div class="back">
+        <p>HTML, CSS, JavaScript, SQL</p>
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Frameworks & Libraries</div>
+      <div class="back">
+        <p>ReactJS, NodeJS, TailwindCSS</p>
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="front">Databases & Tools</div>
+      <div class="back">
+        <p>MongoDB, GitHub, Netlify, VS Code</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
     <h2 class="experience-title">Experience</h2>
 
     <div class="experience-item">
-      <h3>Zidio Development | Feb 2025-July 2025</h3>
-      <ul>
-        <li>Worked on web development projects using HTML, CSS, JavaScript,ReactJS,MongoDB,NodeJS.</li>
-        <li>Built responsive and user-friendly designs.</li>
-        <li>Collaborated with the team for UI/UX improvements.</li>
-      </ul>
+        <h3 >Zidio Development | Feb 2025-July 2025</h3>
+        <ul>
+            <li>Worked on web development projects using HTML, CSS, JavaScript,ReactJS,MongoDB,NodeJS.</li>
+            <li>Built responsive and user-friendly designs.</li>
+            <li>Collaborated with the team for UI/UX improvements.</li>
+        </ul>
     </div>
 
     <div class="experience-item">
-      <h3>Orison Private Limited | Dec 2024-Jan 2025</h3>
-      <ul>
-        <li>Developed Websites using HTML,CSS,JavaScript.</li>
-        <li>Worked on SQL database design and optimization.</li>
-        <li>Integrated secure payment options and APIs.</li>
-      </ul>
+        <h3 >Orison Private Limited | Dec 2024-Jan 2025</h3>
+        <ul>
+            <li>Developed Websites using HTML,CSS,JavaScript.</li>
+            <li>Worked on SQL database design and optimization.</li>
+            <li>Integrated secure payment options and APIs.</li>
+        </ul>
     </div>
-  </section>
+</section>
+
+<section id="contact">
+  <h2 class="rdr2-heading">If you need my services, contact</h2>
+  
+  <div class="contact-links">
+    <a href="https://www.instagram.com/_.cibi_.17/" target="_blank">
+      <img src="C:\Users\CIBI ARULNATH\cibip\images\insta.png" alt="Instagram 1">
+    </a>
+    <a href="https://www.linkedin.com/in/cibi-arulnath-574a1a27b" target="_blank">
+      <img src="C:\Users\CIBI ARULNATH\cibip\images\linked.png" alt="Instagram 2">
+    </a>
+  </div>
+</section>
+
+  
 
 
-  <section id="contact">
-    <h2 class="rdr2-heading">If you need my services, contact</h2>
-    <div class="contact-links">
-      <a href="https://www.instagram.com/_.cibi_.17/" target="_blank">
-        <img src="images/insta.png" alt="Instagram 1">
-      </a>
-      <a href="https://www.linkedin.com/in/cibi-arulnath-574a1a27b" target="_blank">
-        <img src="images/linked.png" alt="LinkedIn 2">
-      </a>
-    </div>
-  </section>
-
-  <script>
-   
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
-
-    document.querySelectorAll('.nav-links li a').forEach(link => {
-      link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-        }
-      });
-    });
 
 
-  </script>
 
   <script src="Script.js"></script>
 </body>
